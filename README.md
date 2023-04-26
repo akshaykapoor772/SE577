@@ -2,10 +2,7 @@
 
 ``  
 npm install
-
-``
-
-``  
 npm start
 
 ``
+
