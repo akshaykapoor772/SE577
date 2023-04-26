@@ -1,6 +1,6 @@
 ## To run the website follow the following command after cloning the repo. 
 
-``  bash
+``bash
 npm install
 npm start
 
