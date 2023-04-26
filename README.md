@@ -2,5 +2,10 @@
 
 ``  
 npm install
+
+``
+
+``  
 npm start
+
 ``
