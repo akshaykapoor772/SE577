@@ -2,6 +2,16 @@
 
 ```sh
 npm install
+```
+
+#### To start the server.
+```sh
+cd src
+node server.js
+```
+
+#### To run the website.
+```sh
 npm start
 ```
 
