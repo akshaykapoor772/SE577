@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import RepoList from '../pages/RepoList';
 
-function Repo() {
+function Repo(props) {
+  const { repoList } = props;
   return (
     <div>
     <div className='navigator'>
@@ -11,7 +13,9 @@ function Repo() {
         <Link to="/repos"className='button'>Repos</Link>
         <Link to="/repodetails"className='button'>Repo Details</Link>
       </div>
-      <h3 className='title'>List of all my repos</h3>
+      <div>
+        <RepoList repos={repoList} />
+      </div>
     </div>
   );
 }

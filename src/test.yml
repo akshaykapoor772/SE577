@@ -1,0 +1,6 @@
+- name: Repository1
+  url: https://github.com/user/repo1
+- name: Repository2
+  url: https://github.com/user/repo2
+- name: Repository3
+  url: https://github.com/user/repo3
