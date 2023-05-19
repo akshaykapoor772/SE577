@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
 import Repos from './pages/Repos';
 import RepoDetails from './pages/RepoDetails';
+import Gistview from './pages/Gistview';
 import './App.css';
 
 
@@ -38,9 +38,11 @@ function App() {
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/repos" element={<Repos repoList={repoList}/>}/>
           <Route exact path="/repodetails" element={<RepoDetails/>}/>
+          <Route exact path="/gist" element={<Gistview/>}/>
           </Routes>
       </Router>
     </div>
+    
   );
 }
 

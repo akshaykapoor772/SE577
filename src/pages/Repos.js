@@ -12,6 +12,7 @@ function Repo(props) {
         <Link to="/about" className='button'>Info About Me</Link>
         <Link to="/repos"className='button'>Repos</Link>
         <Link to="/repodetails"className='button'>Repo Details</Link>
+        <Link to="/gist"className='button'>Gist</Link>
       </div>
       <div>
         <RepoList repos={repoList} />
