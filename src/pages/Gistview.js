@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import Gist from '../components/gist';
 
-function About() {
+function Gistview() {
   return (
     <div>
     <div className='navigator'>
@@ -12,9 +13,9 @@ function About() {
         <Link to="/repodetails"className='button'>Repo Details</Link>
         <Link to="/gist"className='button'>Gist</Link>
       </div>
-      <h1 className='title'>About goes here</h1>
+      <h1 className='title'><Gist /></h1>
     </div>
   );
 }
 
-export default About;
+export default Gistview;
