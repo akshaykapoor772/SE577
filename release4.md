@@ -1,4 +1,5 @@
-# Release 3
+# Release 4
+![UML Diagram](SE577_UML.png)
 ### Step 1
 Install all dependencies
 ```
