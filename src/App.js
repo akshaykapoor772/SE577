@@ -11,14 +11,13 @@ import './App.css';
 
 function App() {
   const [repoList, setRepoList] = useState([]);
-
+  const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:5002/get-repo-list');
         const data = await response.json();
         setRepoList(data);
-        console.log(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -26,9 +25,21 @@ function App() {
   
     fetchData();
   }, []);
-  
-  
 
+  useEffect(() => {
+    const fetchData1 = async () => {
+      try {
+        const response = await fetch('http://localhost:5002/repos');
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData1();
+  }, []);
+  
   return (
     <div className="App">
       <Router>  
@@ -37,7 +48,7 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/repos" element={<Repos repoList={repoList}/>}/>
-          <Route exact path="/repodetails" element={<RepoDetails/>}/>
+          <Route exact path="/repodetails" element={<RepoDetails users={users}/>}/>
           <Route exact path="/gist" element={<Gistview/>}/>
           </Routes>
       </Router>
